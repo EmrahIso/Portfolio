@@ -24,6 +24,10 @@ export default {
       modules: path.resolve(__dirname, 'src/ts/modules'),
     },
   },
+  devtool: 'eval-source-map',
+  devServer: {
+    watchFiles: ['./src/template.html'],
+  },
   module: {
     rules: [
       {
@@ -48,6 +52,10 @@ export default {
             loader: 'postcss-loader',
           },
         ],
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
