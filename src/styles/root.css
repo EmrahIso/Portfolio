@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a:focus-within,
+button:focus-within,
+input:focus-within {
+  border-radius: 6px;
+  outline: 1px solid black;
+}
+
+:root.dark a:focus-within,
+:root.dark button:focus-within,
+:root.dark input:focus-within {
+  border-radius: 6px;
+  outline: 1px solid white;
+}
+/*
+body {
+  font-family: 'Poppins', sans-serif;
+}*/

@@ -1,0 +1,17 @@
+@keyframes buttonMove {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  100% {
+    transform: scale(1.05) translate(0, -8px);
+  }
+}
+
+.buttonMove {
+  animation: buttonMove 0.8s ease-out infinite both alternate;
+}
+
+.portraitCont::after {
+  animation: buttonMove 0.8s ease-out infinite both alternate;
+}

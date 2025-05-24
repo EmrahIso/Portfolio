@@ -1,0 +1,116 @@
+nav[data-state='mobile'] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 91;
+}
+
+nav[data-state='mobile']::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100vh;
+  width: 100vw;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+
+  display: none;
+}
+
+::root.dark nav[data-state='mobile']::before {
+  background-color: rgba(16, 24, 40, 0.3);
+}
+
+::root.light nav[data-state='mobile']::before {
+  background-color: rgba(249, 250, 251, 0.3);
+}
+
+nav[data-state='mobile'][data-open='false'] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav[data-state='mobile'][data-open='false'] ul {
+  transform: scale(0.8);
+}
+
+nav[data-state='mobile'][data-open='false'] li {
+  /* So that I can create opacity transition on mobile navigation */
+  opacity: 0;
+}
+
+nav[data-state='mobile'][data-open='true'] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+nav[data-state='mobile'][data-open='true'] ul {
+  transform: scale(1);
+}
+
+nav[data-state='mobile'][data-open='true'] li {
+  /* So that I can create opacity transition on mobile navigation */
+  opacity: 1;
+}
+
+nav[data-state='mobile'][data-open='true']::before {
+  display: inline-block;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.light nav[data-state='mobile'][data-open='true']::before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark nav[data-state='mobile'][data-open='true']::before {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.nav-button {
+  display: inline-block;
+  position: relative;
+  z-index: 99;
+}
+
+.nav-button[data-mobile='false'] {
+  display: none;
+}
+
+.nav-button span:first-child {
+  top: 50%;
+  transform: translateX(-50%) translateY(-120%);
+}
+
+.nav-button span:last-child {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.nav-button.open span:first-child {
+  transform: rotate(45deg) translateX(calc(-50% + 4px)) translateY(8px);
+}
+
+.nav-button.open span:last-child {
+  transform: rotate(-45deg) translateX(calc(-50% + 4px)) translateY(-8px);
+}
+
+:root.light .theme-button svg:last-child {
+  opacity: 0;
+}
+
+:root.light .theme-button svg:first-child {
+  opacity: 1;
+}
+
+:root.dark .theme-button svg:first-child {
+  opacity: 0;
+}
+
+:root.dark .theme-button svg:last-child {
+  opacity: 1;
+}
