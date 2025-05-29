@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, 
-      minimum-scale=1.0, maximum-scale=1.0,"
+      name="description"
+      content="Frontend developer based in Sarajevo. Passionate about UI design, web development, and creating great user experiences."
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,23 +19,32 @@
     class="font-body bg-gray-50 transition-(background-color) duration-[150ms] dark:bg-gray-900"
   >
     <header
-      class="border-b fixed top-0 left-0 right-0 w-full border-dashed dark:border-gray-600 border-gray-400 z-50 bg-gray-50 dark:bg-gray-900 h-[57px] flex"
+      class="border-b fixed top-0 left-0 right-0 w-full border-dashed dark:border-gray-700 border-gray-400 z-50 bg-gray-50 dark:bg-gray-900 h-[57px] flex"
     >
       <div
-        class="px-3 container max-w-[900px] mx-auto flex items-center justify-between"
+        class="px-3 container max-w-[1024px] mx-auto flex items-center justify-between"
       >
-        <a href="#top" rel="noopener noreferrer" class="order-1">
+        <a
+          href="#top"
+          rel="noopener noreferrer"
+          class="order-1 lg:order-0 lg:ml-4"
+        >
           <img src="./assets/images/logo.png" alt="Logo image" class="h-8" />
         </a>
-        <nav data-navigation data-state="mobile" class="z-50" data-open="false">
+        <nav
+          data-navigation
+          data-state="mobile"
+          class="z-50 lg:order-1"
+          data-open="false"
+        >
           <ul
-            class="flex flex-col gap-y-6 text-center transition-transform duration-300"
+            class="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 lg:gap-x-10 lg:items-center text-center transition-transform duration-300"
           >
             <li>
               <a
                 href="#about"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-800 dark:text-gray-50 transform-opacity duration-300"
+                class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >About</a
               >
             </li>
@@ -42,7 +52,7 @@
               <a
                 href="#projects"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-800 dark:text-gray-50 transform-opacity duration-300"
+                class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Projects</a
               >
             </li>
@@ -50,7 +60,7 @@
               <a
                 href="#skills"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-800 dark:text-gray-50 transform-opacity duration-300"
+                class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Skills</a
               >
             </li>
@@ -58,7 +68,7 @@
               <a
                 href="#contact"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-800 dark:text-gray-50 transform-opacity duration-300"
+                class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Contact</a
               >
             </li>
@@ -67,11 +77,12 @@
         <button
           type="button"
           data-color-theme
-          class="theme-button px-5 py-4 h-7 order-0 text-gray-800 dark:text-neutral-50 flex items-center justify-center cursor-pointer relative"
+          aria-label="Toggle theme"
+          class="group theme-button px-5 lg:mr-1 py-4 h-7 order-0 text-gray-800 dark:text-neutral-50 flex items-center justify-center cursor-pointer relative lg:order-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="ionicon h-6 transition-opacity duration-200 absolute"
+            class="ionicon h-6 transition-opacity duration-200 absolute group-hover:text-gray-600 text-gray-800"
             viewBox="0 0 512 512"
           >
             <path
@@ -95,7 +106,7 @@
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="ionicon h-6 transition-opacity duration-200 absolute"
+            class="ionicon h-6 transition-opacity duration-200 absolute group-hover:text-gray-300 text-gray-200"
             viewBox="0 0 512 512"
           >
             <path
@@ -111,7 +122,8 @@
         <button
           type="button"
           data-navigation-button
-          class="nav-button cursor-pointer order-2 close py-4 px-5 relative"
+          aria-label="Toggle navigation"
+          class="nav-button cursor-pointer order-2 close py-4 px-5 relative lg:hidden"
         >
           <span
             class="bg-gray-800 dark:bg-neutral-50 absolute w-6 h-[3px] rounded-lg origin-center transition-transform duration-[200ms]"
@@ -122,54 +134,56 @@
         </button>
       </div>
     </header>
-    <main class="container max-w-[900px] mt-[50px] mx-auto px-4">
+    <main class="container max-w-[1024px] mt-[50px] mx-auto px-4">
       <div
-        class="border-l border-r border-dashed py-3 dark:border-gray-600 border-gray-400"
+        class="border-l border-r border-dashed py-3 dark:border-gray-700 border-gray-400"
       >
         <section
           id="about"
-          class="pb-10 px-4 border-b border-dashed border-gray-400 dark:border-gray-600"
+          class="pb-10 lg:pb-[80px] md:pt-8 px-4 md:px-5 lg:px-7 md:grid md:gap-x-16 md:grid-cols-[1.5fr_1fr] lg:grid-cols-[1.5fr_1fr] border-b border-dashed border-gray-400 dark:border-gray-700 lg:pt-[140px]"
         >
-          <p
-            class="py-1 px-2 rounded-4xl text-xs inline-block font-medium bg-sky-600 dark:bg-sky-600 dark:text-gray-200 text-gray-100 mt-4 mb-2"
-          >
-            Web designer & developer
-          </p>
-          <h1
-            class="text-3xl font-semibold text-gray-800 dark:text-gray-50 mt-6 mb-9 leading-9"
-          >
-            Hi, I'm <br />
-            <span class="text-sky-600 dark:text-sky-500">Emrah Isovic</span>
-            <br />
-            a Frontend Developer.
-          </h1>
-          <p
-            class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16"
-          >
-            I'm a 17-year-old aspiring frontend developer from Sarajevo, BiH,
-            focused on crafting intuitive user experiences and clean UI design.
-            Always learning, always building.
-          </p>
-          <div class="flex justify-center mb-8">
-            <div
-              class="portraitCont relative after:absolute after:content-['</>'] after:flex after:justify-center after:items-center after:font-bold after:text-xl after:top-[4px] after:left-[8px] after:h-12 after:w-12 after:rounded-md after:bg-gray-50 after:shadow-md after:z-20 text-sky-500"
+          <div>
+            <p
+              class="py-1 px-2 rounded-4xl text-xs inline-block font-medium bg-sky-700 dark:bg-sky-700 dark:text-gray-50 text-gray-50 mt-4 mb-2 lg:mb-6 sm:mt-7"
             >
+              Web designer & developer
+            </p>
+            <h1
+              class="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-50 md:mt-8 mt-6 sm:mt-5 sm:leading-10 mb-9 sm:mb-10 leading-9 md:mb-10 lg:mb-12 lg:text-5xl lg:leading-12"
+            >
+              Hi, I'm <br />
+              <span class="text-sky-700 dark:text-sky-600">Emrah Isović</span>
+              <br />
+              a Web Developer.
+            </h1>
+            <p
+              class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 sm:mb-[90px] md:mb-10 lg:mb-[100px]"
+            >
+              I'm a 17-year-old aspiring frontend web developer from Sarajevo,
+              BiH, focused on crafting intuitive user experiences and clean UI
+              design. Always learning, always building.
+            </p>
+          </div>
+          <div
+            class="flex items-center lg:justify-end justify-center mb-8 sm:mb-4"
+          >
+            <div class="portraitCont relative text-sky-500 lg:pr-9">
               <img
                 src="./assets/images/portrait.jpg"
                 alt="Portrait of Emrah Isovic"
-                class="h-[260px] rounded-full after:content-['</>'] relative z-10"
+                class="portrait h-[260px] rounded-xs sm:ml-0 ml-[-12px] lg:h-[320px] after:content-['</>'] relative z-10 mb-8"
               />
               <div
-                class="h-full w-full bg-sky-500 absolute z-0 top-0 left-0 rounded-full rotate-45"
+                class="portrait-shadow sm:ml-0 ml-[-12px] lg:h-[320px] lg:w-[256px] h-[260px] w-[208px] bg-sky-700 absolute z-0 top-0 left-0 rounded-xs translate-x-6 translate-y-5"
               ></div>
             </div>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center col-span-full sm:mb-6 lg:mb-4">
             <a
               href="#projects"
               class="buttonMove leading-2 text-sm cursor-pointer mt-12 mx-auto text-gray-600 dark:text-gray-200"
             >
-              <p class="flex items-center gap-1">
+              <p class="flex items-center gap-2">
                 View my work
                 <span class="rotate-90 inline-block text-xl font-normal">
                   >
@@ -180,29 +194,28 @@
         </section>
         <section
           id="projects"
-          class="px-4 pb-16 border-b border-dashed border-gray-400 dark:border-gray-600"
+          class="px-4 md:px-5 pb-16 lg:pb-[80px] border-b border-dashed border-gray-400 dark:border-gray-700"
         >
           <h2
-            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 lg:mt-[100px] mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
           >
             My Projects
           </h2>
           <p
-            class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16"
+            class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 sm:mb-[72px]"
           >
             Here are some of my latest coding projects, where you can see my
             skills on real world examples.
           </p>
-          <div>
+          <div class="md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-4">
             <article
-              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden"
+              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 sm:mb-10 rounded-xl overflow-hidden grid grid-cols-1"
             >
-              <div>
-                <img
-                  src="./assets/images/battleship.jpg"
-                  alt="Project Preview Image"
-                />
-              </div>
+              <img
+                src="./assets/images/battleship.jpg"
+                alt="Project Preview Image"
+                class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
+              />
               <div class="px-5 py-5">
                 <h3
                   class="text-lg flex font-semibold mb-3 items-center gap-2 text-gray-800 dark:text-gray-200"
@@ -213,7 +226,7 @@
                   Battleship Game
                 </h3>
                 <p
-                  class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-5 mb-5"
+                  class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-5 mb-7"
                 >
                   An interactive implementation of the "Battleship" game.
                 </p>
@@ -278,112 +291,28 @@
                   <a
                     href="https://emrahiso.github.io/Battleship/"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-sky-600 dark:text-sky-500"
+                    target="_blank"
+                    class="text-sm font-medium text-sky-700 dark:text-sky-500 hover:underline"
                     >View Live &nearr;</a
                   >
                   <a
                     href="https://github.com/EmrahIso/Battleship"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    target="_blank"
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
                     >Source &nearr;</a
                   >
                 </div>
               </div>
             </article>
             <article
-              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden"
+              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl sm:mb-10 overflow-hidden grid grid-cols-1"
             >
-              <div>
-                <img
-                  src="./assets/images/toDo.jpg"
-                  alt="Project Preview Image"
-                />
-              </div>
-              <div class="px-5 py-5">
-                <h3
-                  class="text-lg flex font-semibold mb-3 items-center gap-2 text-gray-800 dark:text-gray-200"
-                >
-                  <span
-                    class="h-3 w-3 bg-sky-600 inline-block rounded-full"
-                  ></span>
-                  ToDo List
-                </h3>
-                <p
-                  class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-5 mb-5"
-                >
-                  Task management system.
-                </p>
-                <ul class="flex items-center gap-1.5 flex-wrap mb-6">
-                  <li
-                    class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z"
-                      />
-                    </svg>
-                    Html
-                  </li>
-                  <li
-                    class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M511.78 328.07c-1.47-11.92-7.51-22.26-18-30.77a3.58 3.58 0 00-.43-.44l-.53-.38-.17-.12-5.57-4-.19-.14-.71-.5a3.5 3.5 0 00-.83-.35c-17.62-10.49-46.79-17.84-91.42-2.09-10.65-17.92-11.86-32.28-4.73-54.28 1.27-3.83.09-6.36-3.71-8-7.64-3.25-18.1-1.59-25.52.37-3.46.9-5.54 2.86-6.2 5.83-4.7 22-18.36 42.1-31.57 61.5l-.78 1.14c-8.14-17.26-6.45-30.63-.78-47.38 1.13-3.34.24-5.56-2.89-7.22-8.74-4.51-21.85-1.41-27.07.13-6.62 1.93-13.72 19.82-21.65 41.24-2 5.39-3.72 10-4.75 12.15-2.45 5-4.79 10.7-7.27 16.75-5.6 13.69-11.91 29.1-20.93 38.78-3.28-7.25 1.88-18.68 6.89-29.77 5.93-13.11 11.53-25.5 5.08-33.41a11.82 11.82 0 00-8.33-4.32 13.26 13.26 0 00-6.15 1c.67-5.65.7-10.11-.95-15.5-2.36-7.69-8.49-12-16.93-11.77-19.22.56-35.48 14.88-45.75 26.8-6.84 8-22 14.1-35.31 19.45-5.26 2.23-10.26 4.23-14.43 6.23-6.65-5.62-15.1-11.29-24-17.28-25-16.78-53.33-35.81-54.31-61.61-1.4-38.11 42-65.14 79.88-84.43 28.71-14.6 53.67-24.28 76.31-29.57 31.8-7.43 58.66-5.93 79.82 4.44 11.58 5.67 17 18 13.56 30.68-9 32.95-46.29 55.53-78.18 65.69-19.21 6.12-35.56 8.68-50 7.84-18.1-1.05-32.88-10.13-39.2-14a21.18 21.18 0 00-3.2-1.8l-.29-.07a3.21 3.21 0 00-3.19 1c-1.3 1.55-.84 4-.37 5.24 6.15 16.07 18.85 26.22 37.74 30.17a92.09 92.09 0 0018.78 1.79c44.21 0 100.62-25.49 121.34-46.48 14.13-14.3 24.42-29 28.68-54.35 4.45-26.55-13.55-45-31.89-53.5-44.57-20.57-95.19-12.44-129.81-2-40.5 12.21-82.4 34.41-114.94 60.93-40.12 32.67-54.62 63-43.12 90.25 11.81 27.93 40.61 45.4 68.46 62.3 9 5.45 17.56 10.64 25.27 16-2.32 1.13-4.69 2.28-7.1 3.43-23.38 11.33-49.9 24.08-64.61 45.15-10.68 15.35-12.68 30.63-5.94 45.42 3.6 7.87 10 13.21 18.89 15.87A50 50 0 0053 432c17.31 0 36.36-7 46.73-13.47 18.32-11.5 30.19-26.94 35.29-45.89 4.54-16.86 3.45-33.61-3.15-48.56l22.45-11.32c-10.83 36-2.53 57.5 6.59 69.36 3.36 4.37 9.42 7 16.19 7.12s13-2.43 16.52-6.77c6.66-8.25 11.58-17.9 16.11-27.55-.24 6.3.06 12.68 2.21 18.09 1.93 4.87 5.11 8.1 9.21 9.34 4.36 1.33 9.47.21 14.39-3.15 22.17-15.17 37.33-51.58 49.51-80.85 1.73-4.16 3.39-8.16 5-11.9a152.5 152.5 0 0012.5 31.07c1.18 2.14 1.08 3.08-.52 4.84-2.41 2.64-5.77 5.83-9.33 9.21-10.78 10.23-24.2 23-26 34.23-.7 4.5 2.4 8.6 7.21 9.53 14.47 2.88 31.9-1.33 46.64-11.25 13.4-9 18.44-21.55 15-37.19-3.33-15.06 4.27-33.76 22.59-55.62 3 12.53 7 22.66 12.52 31.53l-.15.12c-13.34 11.65-31.62 27.6-28.78 46.95a13.35 13.35 0 005.58 9.22 14.22 14.22 0 0011.2 2.06c17.47-3.67 30.62-11.06 40.18-22.57s6.07-24.27 2.85-34.17c25-6.78 47.26-6.61 68.1.5 11.7 4 20.09 10.57 24.93 19.64 6.09 11.41 2.8 21.94-9.29 29.65-3.71 2.37-5.5 3.82-5.61 5.65a2.65 2.65 0 001 2.23c1.4 1.15 5.72 3.15 15.49-3 9-5.65 14.28-13.34 15.63-23a39 39 0 00-.01-8.01zm-399.73 25.06l-.1 1.28c-1.56 14.64-9 27.4-22.15 38-8.26 6.66-17.23 10.75-25.25 11.53-5.6.54-9.67-.22-12.09-2.27-1.81-1.53-2.78-3.82-3-7-1.64-25.48 38.32-50.8 60.81-59.13a51.39 51.39 0 011.78 17.59zm102.35-71.86c-3.7 21.09-14.49 60.9-31.45 76.35-.81.74-1.49 1-1.8.93s-.55-.44-.8-1c-5.66-13.12-3.57-35.28 5-52.69 6.59-13.42 16-22.31 26.52-25a5.29 5.29 0 011.34-.19 1.58 1.58 0 011 .27 1.64 1.64 0 01.19 1.33zm83.49 76.88c-3.19 3.33-7.56 2.88-6.53 1.66l16.24-17.24c-1.31 5.93-5.18 10.84-9.71 15.58zm67.37-14.91a14.07 14.07 0 01-4.93 1.39c-.46-9.07 8.33-19.28 17-26.09 2.33 9.46-2.44 19.46-12.07 24.7z"
-                      />
-                    </svg>
-                    Scss
-                  </li>
-                  <li
-                    class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M32 32v448h448V32zm240 348c0 43.61-25.76 64.87-63.05 64.87-33.68 0-53.23-17.44-63.15-38.49l34.28-20.75c6.61 11.73 11.63 21.65 26.06 21.65 12 0 21.86-5.41 21.86-26.46V240h44zm99.35 63.87c-39.09 0-64.35-17.64-76.68-42L329 382c9 14.74 20.75 24.56 41.5 24.56 17.44 0 27.57-7.72 27.57-19.75 0-14.43-10.43-19.54-29.68-28l-10.52-4.52c-30.38-12.92-50.52-29.16-50.52-63.45 0-31.57 24.05-54.63 61.64-54.63 26.77 0 46 8.32 59.85 32.68L396 290c-7.22-12.93-15-18-27.06-18-12.33 0-20.15 7.82-20.15 18 0 12.63 7.82 17.74 25.86 25.56l10.52 4.51c35.79 15.34 55.94 31 55.94 66.16.01 37.9-29.76 57.64-69.76 57.64z"
-                      />
-                    </svg>
-                    JavaScript
-                  </li>
-                </ul>
-                <div
-                  class="pt-5 border-t-[1px] border-gray-200 dark:border-gray-700 flex items-center justify-between"
-                >
-                  <a
-                    href="https://emrahiso.github.io/Todo-List/"
-                    class="text-sm font-medium text-sky-600 dark:text-sky-500"
-                    rel="noopener noreferrer"
-                    >View Live &nearr;</a
-                  >
-                  <a
-                    href="https://github.com/EmrahIso/Todo-List"
-                    rel="noopener noreferrer"
-                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
-                    >Source &nearr;</a
-                  >
-                </div>
-              </div>
-            </article>
-            <article
-              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden"
-            >
-              <div>
-                <img
-                  src="./assets/images/ticTacToe.jpg"
-                  alt="Project Preview Image"
-                />
-              </div>
+              <img
+                src="./assets/images/ticTacToe.jpg"
+                alt="Project Preview Image"
+                class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
+              />
               <div class="px-5 py-5">
                 <h3
                   class="text-lg flex font-semibold mb-3 items-center gap-2 text-gray-800 dark:text-gray-200"
@@ -448,27 +377,28 @@
                   <a
                     href="https://emrahiso.github.io/Tic-Tac-Toe/"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-sky-600 dark:text-sky-500"
+                    target="_blank"
+                    class="text-sm font-medium text-sky-700 dark:text-sky-500 hover:underline"
                     >View Live &nearr;</a
                   >
                   <a
                     href="https://github.com/EmrahIso/Tic-Tac-Toe"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    target="_blank"
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
                     >Source &nearr;</a
                   >
                 </div>
               </div>
             </article>
             <article
-              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden"
+              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl sm:mb-10 overflow-hidden grid grid-cols-1"
             >
-              <div>
-                <img
-                  src="./assets/images/restaurant.jpg"
-                  alt="Project Preview Image"
-                />
-              </div>
+              <img
+                src="./assets/images/toDo.jpg"
+                alt="Project Preview Image"
+                class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
+              />
               <div class="px-5 py-5">
                 <h3
                   class="text-lg flex font-semibold mb-3 items-center gap-2 text-gray-800 dark:text-gray-200"
@@ -476,12 +406,12 @@
                   <span
                     class="h-3 w-3 bg-sky-600 inline-block rounded-full"
                   ></span>
-                  Restaurant page
+                  ToDo List
                 </h3>
                 <p
                   class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-5 mb-5"
                 >
-                  Restaurant Homepage project from The Odin Project.
+                  Task management system.
                 </p>
                 <ul class="flex items-center gap-1.5 flex-wrap mb-6">
                   <li
@@ -531,15 +461,105 @@
                   class="pt-5 border-t-[1px] border-gray-200 dark:border-gray-700 flex items-center justify-between"
                 >
                   <a
+                    href="https://emrahiso.github.io/Todo-List/"
+                    class="text-sm font-medium text-sky-700 dark:text-sky-500 hover:underline"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >View Live &nearr;</a
+                  >
+                  <a
+                    href="https://github.com/EmrahIso/Todo-List"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
+                    >Source &nearr;</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden md:h-[475px] grid grid-cols-1"
+            >
+              <img
+                src="./assets/images/restaurant.jpg"
+                alt="Project Preview Image"
+                class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
+              />
+              <div class="px-5 pb-5 pt-0 md:grid">
+                <div>
+                  <h3
+                    class="text-lg flex font-semibold mb-3 items-center gap-2 text-gray-800 dark:text-gray-200"
+                  >
+                    <span
+                      class="h-3 w-3 bg-sky-600 inline-block rounded-full"
+                    ></span>
+                    Restaurant page
+                  </h3>
+                  <p
+                    class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-5 mb-5"
+                  >
+                    Project from The Odin Project.
+                  </p>
+                  <ul class="flex items-center gap-1.5 flex-wrap mb-2">
+                    <li
+                      class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M64 32l34.94 403.21L255.77 480 413 435.15 448 32zm308 132H188l4 51h176l-13.51 151.39L256 394.48l-98.68-28-6.78-77.48h48.26l3.42 39.29L256 343.07l53.42-14.92L315 264H148l-12.59-149.59H376.2z"
+                        />
+                      </svg>
+                      Html
+                    </li>
+                    <li
+                      class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M511.78 328.07c-1.47-11.92-7.51-22.26-18-30.77a3.58 3.58 0 00-.43-.44l-.53-.38-.17-.12-5.57-4-.19-.14-.71-.5a3.5 3.5 0 00-.83-.35c-17.62-10.49-46.79-17.84-91.42-2.09-10.65-17.92-11.86-32.28-4.73-54.28 1.27-3.83.09-6.36-3.71-8-7.64-3.25-18.1-1.59-25.52.37-3.46.9-5.54 2.86-6.2 5.83-4.7 22-18.36 42.1-31.57 61.5l-.78 1.14c-8.14-17.26-6.45-30.63-.78-47.38 1.13-3.34.24-5.56-2.89-7.22-8.74-4.51-21.85-1.41-27.07.13-6.62 1.93-13.72 19.82-21.65 41.24-2 5.39-3.72 10-4.75 12.15-2.45 5-4.79 10.7-7.27 16.75-5.6 13.69-11.91 29.1-20.93 38.78-3.28-7.25 1.88-18.68 6.89-29.77 5.93-13.11 11.53-25.5 5.08-33.41a11.82 11.82 0 00-8.33-4.32 13.26 13.26 0 00-6.15 1c.67-5.65.7-10.11-.95-15.5-2.36-7.69-8.49-12-16.93-11.77-19.22.56-35.48 14.88-45.75 26.8-6.84 8-22 14.1-35.31 19.45-5.26 2.23-10.26 4.23-14.43 6.23-6.65-5.62-15.1-11.29-24-17.28-25-16.78-53.33-35.81-54.31-61.61-1.4-38.11 42-65.14 79.88-84.43 28.71-14.6 53.67-24.28 76.31-29.57 31.8-7.43 58.66-5.93 79.82 4.44 11.58 5.67 17 18 13.56 30.68-9 32.95-46.29 55.53-78.18 65.69-19.21 6.12-35.56 8.68-50 7.84-18.1-1.05-32.88-10.13-39.2-14a21.18 21.18 0 00-3.2-1.8l-.29-.07a3.21 3.21 0 00-3.19 1c-1.3 1.55-.84 4-.37 5.24 6.15 16.07 18.85 26.22 37.74 30.17a92.09 92.09 0 0018.78 1.79c44.21 0 100.62-25.49 121.34-46.48 14.13-14.3 24.42-29 28.68-54.35 4.45-26.55-13.55-45-31.89-53.5-44.57-20.57-95.19-12.44-129.81-2-40.5 12.21-82.4 34.41-114.94 60.93-40.12 32.67-54.62 63-43.12 90.25 11.81 27.93 40.61 45.4 68.46 62.3 9 5.45 17.56 10.64 25.27 16-2.32 1.13-4.69 2.28-7.1 3.43-23.38 11.33-49.9 24.08-64.61 45.15-10.68 15.35-12.68 30.63-5.94 45.42 3.6 7.87 10 13.21 18.89 15.87A50 50 0 0053 432c17.31 0 36.36-7 46.73-13.47 18.32-11.5 30.19-26.94 35.29-45.89 4.54-16.86 3.45-33.61-3.15-48.56l22.45-11.32c-10.83 36-2.53 57.5 6.59 69.36 3.36 4.37 9.42 7 16.19 7.12s13-2.43 16.52-6.77c6.66-8.25 11.58-17.9 16.11-27.55-.24 6.3.06 12.68 2.21 18.09 1.93 4.87 5.11 8.1 9.21 9.34 4.36 1.33 9.47.21 14.39-3.15 22.17-15.17 37.33-51.58 49.51-80.85 1.73-4.16 3.39-8.16 5-11.9a152.5 152.5 0 0012.5 31.07c1.18 2.14 1.08 3.08-.52 4.84-2.41 2.64-5.77 5.83-9.33 9.21-10.78 10.23-24.2 23-26 34.23-.7 4.5 2.4 8.6 7.21 9.53 14.47 2.88 31.9-1.33 46.64-11.25 13.4-9 18.44-21.55 15-37.19-3.33-15.06 4.27-33.76 22.59-55.62 3 12.53 7 22.66 12.52 31.53l-.15.12c-13.34 11.65-31.62 27.6-28.78 46.95a13.35 13.35 0 005.58 9.22 14.22 14.22 0 0011.2 2.06c17.47-3.67 30.62-11.06 40.18-22.57s6.07-24.27 2.85-34.17c25-6.78 47.26-6.61 68.1.5 11.7 4 20.09 10.57 24.93 19.64 6.09 11.41 2.8 21.94-9.29 29.65-3.71 2.37-5.5 3.82-5.61 5.65a2.65 2.65 0 001 2.23c1.4 1.15 5.72 3.15 15.49-3 9-5.65 14.28-13.34 15.63-23a39 39 0 00-.01-8.01zm-399.73 25.06l-.1 1.28c-1.56 14.64-9 27.4-22.15 38-8.26 6.66-17.23 10.75-25.25 11.53-5.6.54-9.67-.22-12.09-2.27-1.81-1.53-2.78-3.82-3-7-1.64-25.48 38.32-50.8 60.81-59.13a51.39 51.39 0 011.78 17.59zm102.35-71.86c-3.7 21.09-14.49 60.9-31.45 76.35-.81.74-1.49 1-1.8.93s-.55-.44-.8-1c-5.66-13.12-3.57-35.28 5-52.69 6.59-13.42 16-22.31 26.52-25a5.29 5.29 0 011.34-.19 1.58 1.58 0 011 .27 1.64 1.64 0 01.19 1.33zm83.49 76.88c-3.19 3.33-7.56 2.88-6.53 1.66l16.24-17.24c-1.31 5.93-5.18 10.84-9.71 15.58zm67.37-14.91a14.07 14.07 0 01-4.93 1.39c-.46-9.07 8.33-19.28 17-26.09 2.33 9.46-2.44 19.46-12.07 24.7z"
+                        />
+                      </svg>
+                      Scss
+                    </li>
+                    <li
+                      class="text-xs flex items-center gap-1 px-3 py-1 bg-gray-200 text-gray-800 rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M32 32v448h448V32zm240 348c0 43.61-25.76 64.87-63.05 64.87-33.68 0-53.23-17.44-63.15-38.49l34.28-20.75c6.61 11.73 11.63 21.65 26.06 21.65 12 0 21.86-5.41 21.86-26.46V240h44zm99.35 63.87c-39.09 0-64.35-17.64-76.68-42L329 382c9 14.74 20.75 24.56 41.5 24.56 17.44 0 27.57-7.72 27.57-19.75 0-14.43-10.43-19.54-29.68-28l-10.52-4.52c-30.38-12.92-50.52-29.16-50.52-63.45 0-31.57 24.05-54.63 61.64-54.63 26.77 0 46 8.32 59.85 32.68L396 290c-7.22-12.93-15-18-27.06-18-12.33 0-20.15 7.82-20.15 18 0 12.63 7.82 17.74 25.86 25.56l10.52 4.51c35.79 15.34 55.94 31 55.94 66.16.01 37.9-29.76 57.64-69.76 57.64z"
+                        />
+                      </svg>
+                      JavaScript
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="pt-5 border-t-[1px] border-gray-200 dark:border-gray-700 flex items-center justify-between md:align-self-end"
+                >
+                  <a
                     href="https://emrahiso.github.io/Restaurant-Homepage/"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-sky-600 dark:text-sky-500"
+                    target="_blank"
+                    class="text-sm font-medium text-sky-700 dark:text-sky-500 hover:underline"
                     >View Live &nearr;</a
                   >
                   <a
                     href="https://github.com/EmrahIso/Restaurant-Homepage"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-gray-70 dark:text-gray-300"
+                    target="_blank"
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
                     >Source &nearr;</a
                   >
                 </div>
@@ -549,42 +569,68 @@
         </section>
         <section
           id="skills"
-          class="px-4 pb-[80px] border-b border-dashed border-gray-400 dark:border-gray-600"
+          class="px-4 md:px-5 pb-[80px] lg:pb-[100px] border-b border-dashed border-gray-400 dark:border-gray-700"
         >
           <h2
-            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 lg:mt-[100px] mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
           >
             My Skills
           </h2>
           <p
-            class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16"
+            class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 md:mb-[80px] sm:mb-[72px]"
           >
             I specialize in building responsive, accessible, and visually
             appealing web interfaces using modern frontend technologies. Things
             I code with:
           </p>
-          <ul class="grid grid-cols-4 gap-6 justify-items-center">
-            <li><i class="devicon-javascript-plain colored text-5xl"></i></li>
+          <ul
+            class="grid grid-cols-4 md:grid-cols-5 gap-6 sm:gap-y-10 justify-items-center"
+          >
             <li>
-              <i class="devicon-css3-plain-wordmark colored text-5xl"></i>
-            </li>
-            <li><i class="devicon-sass-original colored text-5xl"></i></li>
-            <li>
-              <i class="devicon-tailwindcss-original colored text-5xl"></i>
+              <i
+                class="devicon-javascript-plain colored text-5xl sm:text-6xl"
+              ></i>
             </li>
             <li>
-              <i class="devicon-html5-plain-wordmark colored text-5xl"></i>
+              <i
+                class="devicon-css3-plain-wordmark colored text-5xl sm:text-6xl"
+              ></i>
             </li>
-            <li><i class="devicon-typescript-plain colored text-5xl"></i></li>
             <li>
-              <i class="devicon-npm-original-wordmark colored text-5xl"></i>
+              <i class="devicon-sass-original colored text-5xl sm:text-6xl"></i>
             </li>
-            <li><i class="devicon-webpack-plain colored text-5xl"></i></li>
-            <li><i class="devicon-git-plain colored text-5xl"></i></li>
-            <li><i class="devicon-jest-plain colored text-5xl"></i></li>
+            <li>
+              <i
+                class="devicon-tailwindcss-original colored text-5xl sm:text-6xl"
+              ></i>
+            </li>
+            <li>
+              <i
+                class="devicon-html5-plain-wordmark colored text-5xl sm:text-6xl"
+              ></i>
+            </li>
+            <li>
+              <i
+                class="devicon-typescript-plain colored text-5xl sm:text-6xl"
+              ></i>
+            </li>
+            <li>
+              <i
+                class="devicon-npm-original-wordmark colored text-5xl sm:text-6xl"
+              ></i>
+            </li>
+            <li>
+              <i class="devicon-webpack-plain colored text-5xl sm:text-6xl"></i>
+            </li>
+            <li>
+              <i class="devicon-git-plain colored text-5xl sm:text-6xl"></i>
+            </li>
+            <li>
+              <i class="devicon-jest-plain colored text-5xl sm:text-6xl"></i>
+            </li>
           </ul>
         </section>
-        <section id="contact" class="px-4 pb-[80px]">
+        <section id="contact" class="px-4 md:px-5 pb-[80px]">
           <h2
             class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
           >
@@ -598,17 +644,20 @@
           </p>
           <address class="not-italic">
             <ul class="flex flex-col gap-6">
-              <li class="flex items-center gap-4">
+              <li
+                class="flex items-center gap-4 lg:gap-5 transition-transform hover:translate-x-2"
+              >
                 <div class="flex items-center">
                   <a
                     href="mailto:emrahisovic20@gmail.com"
                     rel="noopener noreferrer"
+                    aria-label="Link to send me an Email."
                     target="_blank"
-                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 rounded-xl"
+                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 lg:px-3 lg:py-3 rounded-xl"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="ionicon h-7"
+                      class="ionicon h-7 lg:h-9"
                       viewBox="0 0 512 512"
                     >
                       <rect
@@ -635,9 +684,9 @@
                     </svg>
                   </a>
                 </div>
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center lg:gap-0.5">
                   <p
-                    class="uppercase text-xs font-semibold tracking-wider text-gray-600 dark:text-gray-400"
+                    class="uppercase text-xs lg:text-sm font-semibold tracking-wider text-gray-600 dark:text-gray-400"
                   >
                     Email
                   </p>
@@ -645,19 +694,21 @@
                     href="mailto:emrahisovic20@gmail.com"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class="inline-block text-sm dark:text-gray-100"
+                    class="inline-block text-sm lg:text-base dark:text-gray-100"
                     >emrahisovic20@gmail.com</a
                   >
                 </div>
               </li>
-              <li class="flex items-center gap-4">
+              <li
+                class="flex items-center gap-4 lg:gap-5 transition-transform hover:translate-x-2"
+              >
                 <div class="flex items-center">
                   <div
-                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 rounded-xl"
+                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 lg:px-3 lg:py-3 rounded-xl"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="ionicon h-7"
+                      class="ionicon h-7 lg:h-9"
                       viewBox="0 0 512 512"
                     >
                       <path
@@ -681,28 +732,33 @@
                     </svg>
                   </div>
                 </div>
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center lg:gap-0.5">
                   <p
-                    class="uppercase text-xs font-semibold tracking-wider text-gray-600 dark:text-gray-400"
+                    class="uppercase text-xs lg:text-sm font-semibold tracking-wider text-gray-600 dark:text-gray-400"
                   >
                     Location
                   </p>
-                  <p class="inline-block text-sm dark:text-gray-100">
+                  <p
+                    class="inline-block text-sm lg:text-base dark:text-gray-100"
+                  >
                     Sarajevo, BiH
                   </p>
                 </div>
               </li>
-              <li class="flex items-center gap-4">
+              <li
+                class="flex items-center gap-4 lg:gap-5 transition-transform hover:translate-x-2"
+              >
                 <div class="flex items-center">
                   <a
                     href="https://www.instagram.com/emrah.isovich/?hl=en"
                     rel="noopener noreferrer"
+                    aria-label="Link to my Instagram profile."
                     target="_blank"
-                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 rounded-xl"
+                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 lg:px-3 lg:py-3 rounded-xl"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="ionicon h-7"
+                      class="ionicon h-7 lg:h-9"
                       viewBox="0 0 512 512"
                     >
                       <path
@@ -714,9 +770,9 @@
                     </svg>
                   </a>
                 </div>
-                <div class="flex flex-col justify-center">
+                <div class="flex flex-col justify-center lg:gap-0.5">
                   <p
-                    class="uppercase text-xs font-semibold tracking-wider text-gray-600 dark:text-gray-400"
+                    class="uppercase text-xs lg:text-sm font-semibold tracking-wider text-gray-600 dark:text-gray-400"
                   >
                     Instagram
                   </p>
@@ -724,22 +780,25 @@
                     href="https://www.instagram.com/emrah.isovich/?hl=en"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class="inline-block text-sm dark:text-gray-100"
+                    class="inline-block text-sm lg:text-base dark:text-gray-100"
                     >emrah.isovich</a
                   >
                 </div>
               </li>
-              <li class="flex items-center gap-4">
+              <li
+                class="flex items-center gap-4 lg:gap-5 transition-transform hover:translate-x-2"
+              >
                 <div class="flex items-center">
                   <a
                     href="https://github.com/EmrahIso"
                     rel="noopener noreferrer"
+                    aria-label="Link to my GitHub profile."
                     target="_blank"
-                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 rounded-xl"
+                    class="bg-gray-200 dark:bg-slate-200 inline-block px-2 py-2 lg:px-3 lg:py-3 rounded-xl"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="ionicon h-7"
+                      class="ionicon h-7 lg:h-9"
                       viewBox="0 0 512 512"
                     >
                       <path
@@ -750,7 +809,7 @@
                 </div>
                 <div class="flex flex-col justify-center">
                   <p
-                    class="uppercase text-xs font-semibold tracking-wider text-gray-600 dark:text-gray-400"
+                    class="uppercase text-xs lg:text-sm font-semibold tracking-wider text-gray-600 dark:text-gray-400"
                   >
                     Github
                   </p>
@@ -758,7 +817,7 @@
                     href="https://github.com/EmrahIso"
                     rel="noopener noreferrer"
                     target="_blank"
-                    class="inline-block text-sm dark:text-gray-100"
+                    class="inline-block text-sm lg:text-base dark:text-gray-100"
                     >EmrahIso</a
                   >
                 </div>
@@ -769,7 +828,7 @@
       </div>
     </main>
     <footer
-      class="border-t border-dashed h-[57px] dark:border-gray-600 border-gray-400 bg-gray-50 dark:bg-gray-900 flex items-center justify-center"
+      class="border-t border-dashed h-[57px] dark:border-gray-700 border-gray-400 bg-gray-50 dark:bg-gray-900 flex items-center justify-center"
       role="contentinfo"
     >
       <p class="text-md text-gray-800 dark:text-gray-200">
@@ -839,6 +898,6 @@ Sections:
 
 6. Contact ++
 
-7. Footer
+7. Footer ++
 
 -->
