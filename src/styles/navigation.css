@@ -1,77 +1,78 @@
-nav[data-state='mobile'] {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 91;
-}
+@media only screen and (max-width: 1024px) {
+  nav[data-state='mobile'] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 91;
+  }
 
-nav[data-state='mobile']::before {
-  content: '';
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  height: 100vh;
-  width: 100vw;
-  transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: blur(0);
-  backdrop-filter: blur(0);
+  nav[data-state='mobile']::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
 
-  display: none;
-}
+    display: none;
+  }
 
-::root.dark nav[data-state='mobile']::before {
-  background-color: rgba(16, 24, 40, 0.3);
-}
+  ::root.dark nav[data-state='mobile']::before {
+    background-color: rgba(16, 24, 40, 0.3);
+  }
 
-::root.light nav[data-state='mobile']::before {
-  background-color: rgba(249, 250, 251, 0.3);
-}
+  ::root.light nav[data-state='mobile']::before {
+    background-color: rgba(249, 250, 251, 0.3);
+  }
 
-nav[data-state='mobile'][data-open='false'] {
-  opacity: 0;
-  pointer-events: none;
-}
+  nav[data-state='mobile'][data-open='false'] {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-nav[data-state='mobile'][data-open='false'] ul {
-  transform: scale(0.8);
-}
+  nav[data-state='mobile'][data-open='false'] ul {
+    transform: scale(0.8);
+  }
 
-nav[data-state='mobile'][data-open='false'] li {
-  /* So that I can create opacity transition on mobile navigation */
-  opacity: 0;
-}
+  nav[data-state='mobile'][data-open='false'] li {
+    /* So that I can create opacity transition on mobile navigation */
+    opacity: 0;
+  }
 
-nav[data-state='mobile'][data-open='true'] {
-  opacity: 1;
-  pointer-events: all;
-}
+  nav[data-state='mobile'][data-open='true'] {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-nav[data-state='mobile'][data-open='true'] ul {
-  transform: scale(1);
-}
+  nav[data-state='mobile'][data-open='true'] ul {
+    transform: scale(1);
+  }
 
-nav[data-state='mobile'][data-open='true'] li {
-  /* So that I can create opacity transition on mobile navigation */
-  opacity: 1;
-}
+  nav[data-state='mobile'][data-open='true'] li {
+    /* So that I can create opacity transition on mobile navigation */
+    opacity: 1;
+  }
 
-nav[data-state='mobile'][data-open='true']::before {
-  display: inline-block;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
+  nav[data-state='mobile'][data-open='true']::before {
+    display: inline-block;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
 
-.light nav[data-state='mobile'][data-open='true']::before {
-  background-color: rgba(255, 255, 255, 0.5);
-}
+  .light nav[data-state='mobile'][data-open='true']::before {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 
-.dark nav[data-state='mobile'][data-open='true']::before {
-  background-color: rgba(0, 0, 0, 0.25);
+  .dark nav[data-state='mobile'][data-open='true']::before {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 .nav-button {
-  display: inline-block;
   position: relative;
   z-index: 99;
 }

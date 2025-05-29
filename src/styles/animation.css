@@ -15,3 +15,21 @@
 .portraitCont::after {
   animation: buttonMove 0.8s ease-out infinite both alternate;
 }
+
+@keyframes imageMoves {
+  0% {
+    transform: translateY(-17.5px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.portrait {
+  animation: imageMoves 3s ease-in-out infinite both alternate;
+}
+.portrait-shadow {
+  animation: imageMoves 3s ease-in-out infinite both alternate;
+  animation-delay: 0.5s;
+}
