@@ -1,13 +1,13 @@
 import { merge } from 'webpack-merge';
-import common from './webpack.common.ts';
-import type { Configuration } from 'webpack';
-import type { Configuration as DevServerConfig } from 'webpack-dev-server';
+import common from './webpack.common';
+import type { Configuration as WebpackConfiguration } from 'webpack';
+import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 
-interface WebpackDevConfig extends Configuration {
-  devServer?: DevServerConfig;
-}
+type DevConfig = WebpackConfiguration & {
+  devServer?: WebpackDevServerConfiguration;
+};
 
-const devConfig: WebpackDevConfig = {
+const config: DevConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
@@ -16,4 +16,4 @@ const devConfig: WebpackDevConfig = {
   },
 };
 
-export default merge(common, devConfig);
+export default merge<DevConfig>(common, config);

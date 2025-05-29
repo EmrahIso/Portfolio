@@ -17,7 +17,7 @@
   "scripts": {
     "test:watch": "jest --watch *.test.ts",
     "dev": "NODE_OPTIONS='--loader ts-node/esm' webpack serve --config webpack.dev.ts",
-    "build": "webpack --config webpack.prod.ts",
+    "build": "NODE_OPTIONS='--loader ts-node/esm' webpack --config webpack.prod.ts",
     "eslint": "npx eslint . --config eslint.config.ts",
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "type-check": "tsc --noEmit --watch"

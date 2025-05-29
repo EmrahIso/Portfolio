@@ -27,9 +27,6 @@ const config: Configuration = {
     },
   },
   devtool: 'eval-source-map',
-  devServer: {
-    watchFiles: ['./src/template.html'],
-  },
   module: {
     rules: [
       {
