@@ -3,6 +3,16 @@ html {
   overflow-x: hidden;
 }
 
+* {
+  scroll-margin-top: 129px;
+}
+
+@media only screen and (min-width: 1024px) {
+  * {
+    scroll-margin-top: 157px;
+  }
+}
+
 a:focus-within,
 button:focus-within,
 input:focus-within {
@@ -16,7 +26,3 @@ input:focus-within {
   border-radius: 6px;
   outline: 1px solid white;
 }
-/*
-body {
-  font-family: 'Poppins', sans-serif;
-}*/

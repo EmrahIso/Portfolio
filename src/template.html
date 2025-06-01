@@ -8,6 +8,11 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -29,7 +34,7 @@
           rel="noopener noreferrer"
           class="order-1 lg:order-0 lg:ml-4"
         >
-          <img src="./assets/images/logo.png" alt="Logo image" class="h-8" />
+          <img src="/logo.png" alt="Logo image" class="h-8" />
         </a>
         <nav
           data-navigation
@@ -39,35 +44,40 @@
         >
           <ul
             class="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 lg:gap-x-10 lg:items-center text-center transition-transform duration-300"
+            data-nav-list
           >
-            <li>
+            <li data-nav-list-item>
               <a
                 href="#about"
                 rel="noopener noreferrer"
+                data-nav-list-link
                 class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >About</a
               >
             </li>
-            <li>
+            <li data-nav-list-item>
               <a
                 href="#projects"
                 rel="noopener noreferrer"
+                data-nav-list-link
                 class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Projects</a
               >
             </li>
-            <li>
+            <li data-nav-list-item>
               <a
                 href="#skills"
                 rel="noopener noreferrer"
+                data-nav-list-link
                 class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Skills</a
               >
             </li>
-            <li>
+            <li data-nav-list-item>
               <a
                 href="#contact"
                 rel="noopener noreferrer"
+                data-nav-list-link
                 class="text-2xl lg:text-sm font-medium lg:text-gray-700 text-gray-800 lg:hover:text-gray-500 lg:dark:hover:text-gray-400 lg:dark:text-gray-200 dark:text-gray-50 transform-opacity duration-300"
                 >Contact</a
               >
@@ -140,9 +150,10 @@
       >
         <section
           id="about"
+          data-section
           class="pb-10 lg:pb-[80px] md:pt-8 px-4 md:px-5 lg:px-7 md:grid md:gap-x-16 md:grid-cols-[1.5fr_1fr] lg:grid-cols-[1.5fr_1fr] border-b border-dashed border-gray-400 dark:border-gray-700 lg:pt-[140px]"
         >
-          <div>
+          <div data-load-animated="left">
             <p
               class="py-1 px-2 rounded-4xl text-xs inline-block font-medium bg-sky-700 dark:bg-sky-700 dark:text-gray-50 text-gray-50 mt-4 mb-2 lg:mb-6 sm:mt-7"
             >
@@ -152,9 +163,9 @@
               class="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-50 md:mt-8 mt-6 sm:mt-5 sm:leading-10 mb-9 sm:mb-10 leading-9 md:mb-10 lg:mb-12 lg:text-5xl lg:leading-12"
             >
               Hi, I'm <br />
-              <span class="text-sky-700 dark:text-sky-600">Emrah Isović</span>
+              <span class="text-sky-700 dark:text-sky-500">Emrah Isović</span>
               <br />
-              a Web Developer.
+              <span id="auto-typed"></span>
             </h1>
             <p
               class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 sm:mb-[90px] md:mb-10 lg:mb-[100px]"
@@ -166,15 +177,16 @@
           </div>
           <div
             class="flex items-center lg:justify-end justify-center mb-8 sm:mb-4"
+            data-load-animated="right"
           >
             <div class="portraitCont relative text-sky-500 lg:pr-9">
               <img
-                src="./assets/images/portrait.jpg"
+                src="/portrait.jpg"
                 alt="Portrait of Emrah Isovic"
                 class="portrait h-[260px] rounded-xs sm:ml-0 ml-[-12px] lg:h-[320px] after:content-['</>'] relative z-10 mb-8"
               />
               <div
-                class="portrait-shadow sm:ml-0 ml-[-12px] lg:h-[320px] lg:w-[256px] h-[260px] w-[208px] bg-sky-700 absolute z-0 top-0 left-0 rounded-xs translate-x-6 translate-y-5"
+                class="portrait-shadow sm:ml-0 ml-[-12px] lg:h-[320px] lg:w-[256px] h-[260px] w-[208px] bg-sky-700 dark:bg-sky-600 absolute z-0 top-0 left-0 rounded-xs translate-x-6 translate-y-5"
               ></div>
             </div>
           </div>
@@ -194,25 +206,32 @@
         </section>
         <section
           id="projects"
-          class="px-4 md:px-5 pb-16 lg:pb-[80px] border-b border-dashed border-gray-400 dark:border-gray-700"
+          data-section
+          class="px-4 md:px-5 pb-[80px] lg:pb-[100px] border-b border-dashed border-gray-400 dark:border-gray-700"
         >
           <h2
             class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 lg:mt-[100px] mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            data-animated
           >
             My Projects
           </h2>
           <p
             class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 sm:mb-[72px]"
+            data-animated
           >
             Here are some of my latest coding projects, where you can see my
             skills on real world examples.
           </p>
-          <div class="md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-4">
+          <div
+            class="md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-4"
+            data-animated-group
+            data-group-animation-finished="false"
+          >
             <article
               class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 sm:mb-10 rounded-xl overflow-hidden grid grid-cols-1"
             >
               <img
-                src="./assets/images/battleship.jpg"
+                src="/battleship.jpg"
                 alt="Project Preview Image"
                 class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
               />
@@ -309,7 +328,7 @@
               class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl sm:mb-10 overflow-hidden grid grid-cols-1"
             >
               <img
-                src="./assets/images/ticTacToe.jpg"
+                src="/ticTacToe.jpg"
                 alt="Project Preview Image"
                 class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
               />
@@ -395,7 +414,7 @@
               class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl sm:mb-10 overflow-hidden grid grid-cols-1"
             >
               <img
-                src="./assets/images/toDo.jpg"
+                src="/toDo.jpg"
                 alt="Project Preview Image"
                 class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
               />
@@ -481,7 +500,7 @@
               class="bg-gray-50 dark:bg-gray-900 dark:border-[1px] dark:border-gray-800 shadow-sm mb-6 rounded-xl overflow-hidden md:h-[475px] grid grid-cols-1"
             >
               <img
-                src="./assets/images/restaurant.jpg"
+                src="/restaurant.jpg"
                 alt="Project Preview Image"
                 class="max-h-[312px] sm:max-h-[420px] md:h-[240px] w-full"
               />
@@ -568,16 +587,19 @@
           </div>
         </section>
         <section
+          data-section
           id="skills"
           class="px-4 md:px-5 pb-[80px] lg:pb-[100px] border-b border-dashed border-gray-400 dark:border-gray-700"
         >
           <h2
             class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 lg:mt-[100px] mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            data-animated
           >
             My Skills
           </h2>
           <p
             class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16 md:mb-[80px] sm:mb-[72px]"
+            data-animated
           >
             I specialize in building responsive, accessible, and visually
             appealing web interfaces using modern frontend technologies. Things
@@ -585,65 +607,73 @@
           </p>
           <ul
             class="grid grid-cols-4 md:grid-cols-5 gap-6 sm:gap-y-10 justify-items-center"
+            data-animated-group
+            data-group-animation-finished="false"
           >
-            <li>
+            <li class="">
               <i
                 class="devicon-javascript-plain colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i
                 class="devicon-css3-plain-wordmark colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i class="devicon-sass-original colored text-5xl sm:text-6xl"></i>
             </li>
-            <li>
+            <li class="">
               <i
                 class="devicon-tailwindcss-original colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i
                 class="devicon-html5-plain-wordmark colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i
                 class="devicon-typescript-plain colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i
                 class="devicon-npm-original-wordmark colored text-5xl sm:text-6xl"
               ></i>
             </li>
-            <li>
+            <li class="">
               <i class="devicon-webpack-plain colored text-5xl sm:text-6xl"></i>
             </li>
-            <li>
+            <li class="">
               <i class="devicon-git-plain colored text-5xl sm:text-6xl"></i>
             </li>
-            <li>
+            <li class="">
               <i class="devicon-jest-plain colored text-5xl sm:text-6xl"></i>
             </li>
           </ul>
         </section>
-        <section id="contact" class="px-4 md:px-5 pb-[80px]">
+        <section id="contact" data-section class="px-4 md:px-5 pb-[80px]">
           <h2
-            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            class="text-3xl font-semibold text-gray-800 relative dark:text-gray-50 mt-18 lg:mt-[100px] mb-16 after:content-[''] after:bg-sky-600 dark:after:bg-sky-600 after:h-1 after:w-26 after:rounded-2xl after:absolute after:bottom-[-16px] after:left-0 leading-9"
+            data-animated
           >
             Contact Me
           </h2>
           <p
             class="leading-6 py-1 border-l-2 border-sky-600 dark:border-sky-500 pl-3 text-gray-600 dark:text-gray-200 text-base mb-16"
+            data-animated
           >
             Open to collaborations, questions, or a friendly chat — get in
             touch!
           </p>
           <address class="not-italic">
-            <ul class="flex flex-col gap-6">
+            <ul
+              class="flex flex-col gap-6"
+              data-animated-group
+              data-group-animation-finished="false"
+            >
               <li
                 class="flex items-center gap-4 lg:gap-5 transition-transform hover:translate-x-2"
               >
@@ -837,67 +867,3 @@
     </footer>
   </body>
 </html>
-
-<!--
-Najbolje Portfolio stranice za Primjer
-
-Overall Design:
-
-- https://krupal-portfolio.vercel.app/
-- https://fabra.dev/
-- https://www.osallak.tech/
-- https://www.nabinkhair.com.np/
-- https://mahbubshaun.github.io/my_portfolio_website/
-
-Font:
-
-- https://www.nabinkhair.com.np/
-- https://www.joshwcomeau.com/
-
-Layout:
-
-https://www.nabinkhair.com.np/
-
-Progress-Line Component:
-
-- https://www.osallak.tech/
-
-Home Component:
-
-- https://dhruv-alpha.vercel.app/
-
-Color: 
-
-- https://codexoft.tech/
-
-Navbar Component:
-
-- https://zubayer-sigma.vercel.app/
-
-
-Subhero Animation Component:
-
-- https://stratisbakas.com/
-
-Made with [hearth] in Sarajevo, BiH
-
-
-CLEAN
-
-https://rulian.co/#work
-
-Sections:
-
-1. Navigation ++
-
-2. About ++
-
-4. Projects ++
-
-5. Skills  ++
-
-6. Contact ++
-
-7. Footer ++
-
--->

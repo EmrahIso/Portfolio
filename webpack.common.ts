@@ -1,7 +1,8 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { fileURLToPath } from 'url';
-import type { Configuration } from 'webpack';
+import { type Configuration } from 'webpack';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,6 +14,14 @@ const config: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/template.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(process.cwd(), 'public'),
+          to: path.resolve(process.cwd(), 'dist'),
+        },
+      ],
     }),
   ],
   output: {
@@ -57,7 +66,15 @@ const config: Configuration = {
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              sources: false,
+              esModule: false,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

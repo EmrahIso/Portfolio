@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "emrahisovic-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "A responsive portfolio website to showcase my frontend development work.",
   "homepage": "https://github.com/EmrahIso/Portfolio#readme",
   "bugs": {
     "url": "https://github.com/EmrahIso/Portfolio/issues"
@@ -33,12 +33,14 @@
     "@eslint/js": "^9.26.0",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/eslint": "^9.6.1",
+    "@types/he": "^1.2.3",
     "@types/html-webpack-plugin": "^3.2.9",
     "@types/node": "^22.15.24",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.1",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
     "core-js": "^3.42.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.26.0",
@@ -60,5 +62,9 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1",
     "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "he": "^1.2.0",
+    "typed.js": "^2.1.0"
   }
 }

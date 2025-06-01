@@ -1,5 +1,12 @@
 import '../styles/tailwind.css';
 
-import './navigation';
+import './modules/storage';
 
-console.log('Hello World');
+import './modules/listeners';
+
+// To make sure that we are in development mode
+if (process.env.NODE_ENV !== 'production') {
+  console.log('----------------------');
+  console.log('Looks like we are in development mode!');
+  console.log('----------------------');
+}
